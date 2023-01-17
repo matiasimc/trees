@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# Ecosia Frontend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is meant to be a code challenge for a Frontend Software Engineer position at Ecosia.
+
+The page was developed using React, and it shows a list of trees along with images initially hidden. The app fetches the data from
+[Ecosia endpoint](https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json), and uses
+React material UI library [mui.com](https://mui.com/) as UI suite.
+
+## Components
+
+### App
+Main component that fetches the data from API endpoint and renders the tree gallery.
+
+### Gallery
+Gallery component that uses Grid layout from mui to render its children.
+
+### TreeView
+Tree result component that renders tree data in a card format. It has a button to toggle the tree image.
 
 ## Available Scripts
 
@@ -38,9 +53,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

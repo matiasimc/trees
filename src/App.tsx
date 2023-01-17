@@ -3,7 +3,7 @@ import TreeView from "./components/tree-view/TreeView";
 import { useEffect, useState } from "react";
 import "./App.css";
 
-type Tree = {name: string, species_name: string, image: string};
+type Tree = { name: string; species_name: string; image: string };
 
 function App() {
   const [trees, setTrees] = useState<Tree[]>([]);

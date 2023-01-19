@@ -7,6 +7,7 @@ type Tree = { name: string; species_name: string; image: string };
 
 function App() {
   const [trees, setTrees] = useState<Tree[]>([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     fetch(
@@ -14,12 +15,14 @@ function App() {
     )
       .then((response) => response.json())
       .then((json) => json["trees"])
-      .then(setTrees);
+      .then(setTrees)
+      .catch((error) => setError("Error getting trees, please try again."));
   }, []);
 
   return (
     <div className="App">
-      <Gallery>{buildTreeViews(trees)}</Gallery>
+      {error === "" && <Gallery>{buildTreeViews(trees)}</Gallery>}
+      {error !== "" && <p>{error}</p>}
     </div>
   );
 }

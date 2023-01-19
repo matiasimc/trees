@@ -6,6 +6,10 @@ import "./TreeView.css";
 
 type Props = { name: string; species_name: string; image: string };
 
+/**
+ * Component that renders a material Card with tree information. The tree image
+ * is hidden by default and can be shown on button press.
+ */
 function TreeView({ name, species_name, image }: Props) {
   const [hidden, toggleImage] = useState(true);
   const [buttonText, toggleButtonText] = useState("Show image");

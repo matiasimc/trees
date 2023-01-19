@@ -4,6 +4,9 @@ import "./Gallery.css";
 
 type Props = { children: React.ReactNode };
 
+/**
+ * Component that renders a Grid gallery of its children.
+ */
 function Gallery({ children }: Props) {
   const gridItems = React.Children.map(children, buildGridItem);
   return (

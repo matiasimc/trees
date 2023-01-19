@@ -5,6 +5,10 @@ import "./App.css";
 
 type Tree = { name: string; species_name: string; image: string };
 
+/**
+ * Main page component. Calls tree API to render a tree gallery, or error
+ * message if API call fails.
+ */
 function App() {
   const [trees, setTrees] = useState<Tree[]>([]);
   const [error, setError] = useState("");
